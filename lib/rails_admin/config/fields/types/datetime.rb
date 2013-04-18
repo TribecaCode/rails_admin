@@ -41,12 +41,12 @@ module RailsAdmin
                   end
                 end
               end
-            #   parse_date_string(date_string)
-            # end
+              parse_date_string(date_string)
+            end
 
-            # # Parse normalized date strings using time zone
-            # def parse_date_string(date_string)
-            #   ::Time.zone.parse(date_string)
+            # Parse normalized date strings using time zone
+            def parse_date_string(date_string)
+              ::Time.zone.parse(date_string)
             end
 
           end

@@ -22,9 +22,9 @@ module RailsAdmin
           end
 
           # Parse normalized date (time) strings using UTC
-          # def self.parse_date_string(date_string)
-          #   ::DateTime.parse(date_string)
-          # end
+          def self.parse_date_string(date_string)
+            ::DateTime.parse(date_string)
+          end
 
           register_instance_option :strftime_format do
             (localized_format.include? "%p") ? "%I:%M %p" : "%H:%M"
