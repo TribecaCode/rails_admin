@@ -130,6 +130,10 @@ module RailsAdmin
             strftime_format.include? "%p"
           end
 
+          def value
+            bindings[:object].send(name)
+          end
+
           def parse_input(params)
             params[name] = self.class.normalize(params[name], "#{localized_date_format} #{localized_time_format}") if params[name].present?
           end
